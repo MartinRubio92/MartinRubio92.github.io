@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from './LiIcon';
 
@@ -27,7 +27,7 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-const Education = () => {
+const Education = ({educations}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll(
     {
@@ -35,6 +35,7 @@ const Education = () => {
       offset: ["start end", "center start"]
     }
   )
+
   return (
     <div className='my-64'>
       <h2 className='font-hold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
@@ -50,29 +51,9 @@ const Education = () => {
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 
-          <Details 
-            type='Bachelor Of Science In Computer Science' 
-            place='Massachusetts Institute Of Technology (MIT)'
-            time='2016-2020'
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
-          />
-
-          <Details 
-            type='Bachelor Of Science In Computer Science' 
-            place='Massachusetts Institute Of Technology (MIT)'
-            time='2016-2020'
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
-          />
-
-          <Details 
-            type='Bachelor Of Science In Computer Science' 
-            place='Massachusetts Institute Of Technology (MIT)'
-            time='2016-2020'
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
-          />
+          {educations.map((detail) => (
+            <Details key={detail.type} {...detail} />
+          ))}
 
         </ul>
       </div>

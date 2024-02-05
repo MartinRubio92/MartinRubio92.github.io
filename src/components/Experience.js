@@ -30,7 +30,7 @@ const Details = ({position, company, companyLink, time, address, work}) => {
   );
 };
 
-const Experience = () => {
+const Experience = ({experiences}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll(
     {
@@ -38,6 +38,7 @@ const Experience = () => {
       offset: ["start end", "center start"]
     }
   )
+
   return (
     <div className='my-64'>
       <h2 className='font-hold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
@@ -53,26 +54,9 @@ const Experience = () => {
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 
-          <Details position='Software Engineer' company='Google'
-            time='2022-Present' address='Mountain View, CA'
-            work="Worked on a team responsible for developing new features for Google's 
-            search engine, including improving the accuracy and relevance of search results and 
-            developing new tools for data analysis and visualization."
-          />
-
-          <Details position='Software Engineer' company='Google'
-            time='2022-Present' address='Mountain View, CA'
-            work="Worked on a team responsible for developing new features for Google's 
-            search engine, including improving the accuracy and relevance of search results and 
-            developing new tools for data analysis and visualization."
-          />
-
-          <Details position='Software Engineer' company='Google'
-            time='2022-Present' address='Mountain View, CA'
-            work="Worked on a team responsible for developing new features for Google's 
-            search engine, including improving the accuracy and relevance of search results and 
-            developing new tools for data analysis and visualization."
-          />
+          {experiences.map((detail) => (
+            <Details key={detail.position} {...detail} />
+          ))}
 
         </ul>
       </div>

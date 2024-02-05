@@ -1,0 +1,11 @@
+export const TEXT_BROWSER = "Portfolio - Martin Rubio"
+export const TEXT_META_INDEX = "This is the portfolio from Martin Rubio"
+export const MI_TEXTO = "¡Hola! Este es mi texto para la página.";
+export const TITLE_ABOUT = "Passion Fuels Purposse!";
+export const TEXT_ABOUT_PART_1 = "Hi, I'm MartinRubio, a web developer and UI/UX designer with a passion for creating beautiful, functional, and user-centered digital experiences. With 7 years of experience in the field. I am always looking for new and innovative ways to bring my clients' visions to life.";
+export const TEXT_ABOUT_PART_2 = "I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users.";
+export const TEXT_ABOUT_PART_3 = "Whether I'm working on a website, mobile app, or other digital product, I bring my commitment to design excellence and user-centered thinking to every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.";
+export const PRESENTATION_HOME = "Turning Vision Into Reality With Code And Design.";
+export const RESUME_HOME = "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.";
+export const WORK_1_EXPERIENCE = "IT Resources"
+export const TITLE_SKILLS = "DEVELOPER FULL STACK"

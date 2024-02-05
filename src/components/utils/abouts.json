@@ -1,0 +1,90 @@
+{
+  "clients": 1,
+  "projects": 1,
+  "years": 7,
+  "experiences":
+  [
+    {
+      "position": "Developer Full Stack",
+      "company": "IT Resources",
+      "time": "2016-2021",
+      "address": "Buenos Aires",
+      "work": "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+    },
+    {
+      "position": "Developer Full Stack",
+      "company": "Bizit Global",
+      "time": "2021-Present",
+      "address": "Cordoba",
+      "work": "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+    }
+  ],
+  "educations":
+  [
+    {
+      "type": "Ingeniería en Informática",
+      "place": "UNDAV (Universidad Nacional de Avellaneda)",
+      "time": "2013 – Actualidad",
+      "info": "Solamente me quedan 5 materias, próximo a la realización de la tesis."
+    },
+    {
+      "type": "Técnico Electrónico y Bachiller",
+      "place": "Instituto Tecnológico San Bonifacio",
+      "time": "2007 - 2010",
+      "info": "Colegio tecnico de muy buen nivel, donde empece a conocer sobre la programacion con PIC con Assembler y principios de C"
+    }
+  ],
+  "skills":
+  [
+    {
+      "name": "JAVA",
+      "x": "-25vw",
+      "y": "2vw"
+    },
+    {
+      "name": "JS",
+      "x": "-15vw",
+      "y": "10vw"
+    },
+    {
+      "name": "HTML",
+      "x": "20vw",
+      "y": "6vw"
+    },
+    {
+      "name": "CSS",
+      "x": "0vw",
+      "y": "12vw"
+    },
+    {
+      "name": "ReactJS",
+      "x": "-20vw",
+      "y": "-15vw"
+    },
+    {
+      "name": "NextJS",
+      "x": "15vw",
+      "y": "-12vw"
+    },
+    {
+      "name": "Tailwind CSS",
+      "x": "32vw",
+      "y": "-5vw"
+    },
+    {
+      "name": "Web Design",
+      "x": "0vw",
+      "y": "-20vw"
+    },
+    {
+      "name": "API Design",
+      "x": "15vw",
+      "y": "20vw"
+    },
+    {
+      "name": "Firebase",
+      "x": "-25vw",
+      "y": "10vw"
+    }
+  ]
+}

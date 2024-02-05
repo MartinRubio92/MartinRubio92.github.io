@@ -1,14 +1,32 @@
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
-import Skills from '@/components/Skills'
-import Experience from '@/components/Experience'
-import Education from '@/components/Education'
+
 import Head from 'next/head'
+import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
-import profilePic from "../../public/images/profile/developer-pic-2.jpg"
-import Image from 'next/image'
+import fsPromises from 'fs/promises';
+import path from 'path'
+import AnimatedText from '@/components/AnimatedText'
+import Education from '@/components/Education'
+import Experience from '@/components/Experience'
+import Layout from '@/components/Layout'
+import Skills from '@/components/Skills'
 import TransitionEffect from '@/components/TransitionEffect'
+import profilePic from "../../public/images/profile/developer-pic-2.png"
+import { TEXT_ABOUT_PART_1, TEXT_ABOUT_PART_2, TEXT_ABOUT_PART_3, TITLE_ABOUT } from '@/components/utils/constans'
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'src/components/utils/abouts.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  const props = {
+    objectData: objectData
+  };
+
+  return {
+    props: props
+  };
+}
 
 const AnimatedNumbers = ({value}) => {
   const ref = useRef(null);
@@ -35,7 +53,7 @@ const AnimatedNumbers = ({value}) => {
 
 }
 
-const about = () => {
+const about = ({objectData}) => {
   return (
     <>
       <Head>
@@ -45,24 +63,19 @@ const about = () => {
       <TransitionEffect />
       <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
-          <AnimatedText text='Passion Fuels Purposse!' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
+          <AnimatedText text={TITLE_ABOUT} className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
             
               <p className='font-medium'>
-                Hi, I'm MartinRubio, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-                and user-centered digital experiences. With 7 years of experience in the field. I am always looking for 
-                new and innovative ways to bring my clients' visions to life.
+                {TEXT_ABOUT_PART_1}
               </p>
               <p className='my-4 font-medium'>
-                I believe that design is about more than just making things look pretty – it's about solving problems and 
-                creating intuitive, enjoyable experiences for users. 
+                {TEXT_ABOUT_PART_2}
               </p>
               <p className='font-medium'>
-                Whether I'm working on a website, mobile app, or 
-                other digital product, I bring my commitment to design excellence and user-centered thinking to 
-                every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
+                {TEXT_ABOUT_PART_3}
               </p>
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid borde-dark 
@@ -77,28 +90,34 @@ const about = () => {
             <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
               <div className='flex flex-col  items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                  <AnimatedNumbers value={50} />+
+                  <AnimatedNumbers value={objectData.clients} />+
                 </span>
-                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>satisfied clients</h2>
+                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
+                  satisfied clients
+                </h2>
               </div>
               <div className='flex flex-col  items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                  <AnimatedNumbers value={40} />+
+                  <AnimatedNumbers value={objectData.projects} />+
                 </span>
-                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>projet completed</h2>
+                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
+                  projet completed
+                </h2>
               </div>
               <div className='flex flex-col  items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                  <AnimatedNumbers value={7} />+
+                  <AnimatedNumbers value={objectData.years} />+
                 </span>
-                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>years of experience</h2>
+                <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
+                  years of experience
+                </h2>
               </div>
             </div>
           </div>
           
-          <Skills />
-          <Experience />
-          <Education />
+          <Skills skills={objectData.skills} />
+          <Experience experiences={objectData.experiences} />
+          <Education educations={objectData.educations} />
         </Layout>
       </main>
     </>
