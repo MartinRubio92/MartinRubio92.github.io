@@ -10,7 +10,7 @@ const CustomLink = ({href, title, className=""}) => {
   const router = useRouter();
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} scroll={false} className={`${className} relative group`}>
       {title}
       <span 
         className={`
@@ -74,10 +74,9 @@ const NavBar = () => {
       
       <div className='w-full flex justify-between items-center lg:hidden'>
         <nav>
-          <CustomLink href="/" title="Home" className='mr-4' />
-          <CustomLink href="/about" title="About" className='mx-4' />
-          <CustomLink href="/projects" title="Projects" className='mx-4' />
-          {/* <CustomLink href="/articles" title="Acticles" className='ml-4' /> */}
+          <CustomLink href="#home" title="Home" className='mr-4' />
+          <CustomLink href="#about" title="About" className='mx-4' />
+          <CustomLink href="#projects" title="Projects" className='mx-4' />
         </nav>
 
         <nav className='flex items-center justify-center flex-wrap'>
@@ -124,10 +123,9 @@ const NavBar = () => {
         '>
 
           <nav className='flex items-center flex-col justify-center'>
-            <CustomMobileLink href="/" title="Home" className='' toggle={handleIsOpen} />
-            <CustomMobileLink href="/about" title="About" className='' toggle={handleIsOpen} />
-            <CustomMobileLink href="/projects" title="Projects" className='' toggle={handleIsOpen} />
-            {/* <CustomMobileLink href="/articles" title="Acticles" className='' toggle={handleIsOpen} /> */}
+            <CustomMobileLink href="#home" title="Home" className='' toggle={handleIsOpen} />
+            <CustomMobileLink href="#about" title="About" className='' toggle={handleIsOpen} />
+            <CustomMobileLink href="#projects" title="Projects" className='' toggle={handleIsOpen} />
           </nav>
 
           <nav className='flex items-center justify-center flex-wrap mt-2'>
