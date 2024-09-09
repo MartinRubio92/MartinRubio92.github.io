@@ -18,6 +18,7 @@ import { PRESENTATION_HOME, RESUME_HOME, TEXT_BROWSER, TEXT_META_INDEX, TEXT_ABO
 import { GithubIcon } from '@/components/Icons'
 import project1 from '../../public/images/projects/crypto-screener-cover-image.jpg'
 import { motion } from 'framer-motion'
+import Logo from '@/components/Logo'
 
 const FramerImage = motion(Image);
 
@@ -121,6 +122,9 @@ export default function Home({ objectData }) {
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light scroll-smooth'>
         <Layout className='pt-0 md:pt-16 sm:pt-8'>
+          <div className='fixed z-50 left-12 -translate-x-1/2 bottom-5 '>
+            <Logo />
+          </div>
           <section id="home" className='flex items-center justify-between w-full lg:flex-col scroll-smooth'>
             <div className='w-1/2 md:w-full'>
               <Image src={profilePic} alt="CodeBucjs" className='"w-full h-auto lg:hidden md:inline-block md:w-full'
@@ -153,10 +157,6 @@ export default function Home({ objectData }) {
               </div>
             </div>
           </section>
-
-          <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
-            <Image src={lightBlub} alt='MartinRubio' className='w-full h-auto' />
-          </div>
 
           {/* About */}
           <section id="about" className="scroll-smooth">

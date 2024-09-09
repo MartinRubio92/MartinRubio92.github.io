@@ -165,9 +165,6 @@ const NavBar = () => {
 
       }
       
-      <div className='absolute left-[50%] top-2 translante-x-[50%]'>
-        <Logo />
-      </div>
     </header>
   )
 }

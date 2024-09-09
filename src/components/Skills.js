@@ -2,44 +2,33 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { TITLE_SKILLS } from './utils/constans'
 
-const Skill = ({name, x, y}) => {
-  return (
-    <motion.div className='flex items-center justify-center rounded-full font-semibold bg-dark text-light
-      py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light
-      lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
-      xs:text-dark xs:dark:text-light xs:font-bold
-      '
-      whileHover={{scale:1.05}}
-      initial={{ x:0, y:0 }}
-      whileInView={{ x:x, y:y, transition: { duration:1.5 } }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
-  )
-}
 const Skills = ({skills}) => {
   return (
     <>
-      <h2 className='font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32'>Skills</h2>
-      <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
-        lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] 
-        lg:bg-circularLightLg lg:dark:bg-circularDarkLg
-        md:bg-circularLightMd md:dark:bg-circularDarkMd
-        sm:bg-circularLightSm sm:dark:bg-circularDarkSm
-      '>
-        <motion.div className='flex items-center justify-center rounded-full font-semibold bg-dark text-light
-          p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2'
-          whileHover={{scale:1.05}}
-        >
-          {TITLE_SKILLS}
-        </motion.div>
+      <a href="#" className="group relative block bg-black">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+          className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        />
 
-        {skills.map((detail) => (
-          <Skill key={detail.name} {...detail} />
-        ))}
+        <div className="relative p-4 sm:p-6 lg:p-8">
+          <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
 
-      </div>
+          <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+          <div className="mt-32 sm:mt-48 lg:mt-64">
+            <div
+              className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+            >
+              <p className="text-sm text-white">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
     </>
   )
 }
