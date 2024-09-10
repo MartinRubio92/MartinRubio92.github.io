@@ -32,12 +32,17 @@ const Details = ({position, company, companyLink, time, address, work}) => {
 
 const Experience = ({experiences}) => {
   const ref = useRef(null);
+  
   const { scrollYProgress } = useScroll(
     {
       target: ref,
       offset: ["start end", "center start"]
     }
   )
+
+  if (!experiences || experiences.length === 0) {
+    return <div>Loading experiences...</div>;
+  }
 
   return (
     <div className='my-64'>

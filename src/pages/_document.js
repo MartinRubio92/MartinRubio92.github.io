@@ -4,7 +4,13 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+          as="style"
+        />
+      </Head>
       <body>
         <Script id="theme-switcher" strategy='beforeInteractive'>
           {`

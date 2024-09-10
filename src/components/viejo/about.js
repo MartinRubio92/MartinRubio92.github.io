@@ -10,9 +10,9 @@ import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Layout from '@/components/Layout'
 import Skills from '@/components/Skills'
-import TransitionEffect from '@/components/TransitionEffect'
+import TransitionEffect from '@/components/viejo/TransitionEffect'
 import profilePic from "../../public/images/profile/developer-pic-2.png"
-import { TEXT_ABOUT_PART_1, TEXT_ABOUT_PART_2, TEXT_ABOUT_PART_3, TITLE_ABOUT } from '@/components/utils/constans'
+import { TEXT_ABOUT_PART_1, TEXT_ABOUT_PART_2, TEXT_ABOUT_PART_3, TITLE_ABOUT } from '@/components/utils/constants_es'
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'src/components/utils/abouts.json');

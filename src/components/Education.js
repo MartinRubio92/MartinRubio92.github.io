@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from './LiIcon';
 
@@ -35,6 +35,10 @@ const Education = ({educations}) => {
       offset: ["start end", "center start"]
     }
   )
+
+  if (!educations || educations.length === 0) {
+    return <div>Loading educations...</div>;
+  }
 
   return (
     <div className='my-64'>

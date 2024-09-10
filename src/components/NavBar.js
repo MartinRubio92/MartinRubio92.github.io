@@ -1,10 +1,10 @@
-import Link from 'next/link'
 import React, { useState } from 'react'
-import Logo from './Logo'
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons';
-import {motion} from "framer-motion";
 import { useRouter } from 'next/router';
+import Link from 'next/link'
+import { motion } from "framer-motion";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
+import { useData } from './context/DataContext';
 
 const CustomLink = ({href, title, className=""}) => {
   const router = useRouter();
@@ -53,7 +53,12 @@ const CustomMobileLink = ({href, title, className="", toggle}) => {
   )
 }
 
-const NavBar = () => {
+const NavBar = ( ) => {
+  const { abouts, translations, locale, setLocale } = useData();
+
+  const switchLanguage = () => {
+    setLocale(locale === 'es' ? 'en' : 'es');
+  };
 
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +66,8 @@ const NavBar = () => {
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
   }
+
+  const githubLink = abouts?.links?.github || '#';
 
   return (
     <header className='w-fulll px-32 py-8 font-medium flex items-center justify-between
@@ -80,14 +87,14 @@ const NavBar = () => {
         </nav>
 
         <nav className='flex items-center justify-center flex-wrap'>
-          <motion.a href="https://t" target={"_blank"}
+          <motion.a href={githubLink} target={"_blank"}
             whileHover={{y:-2}}
             whileTap={{scale:0.9}}
             className='w-6 mr-3'
           >
             <GithubIcon />
           </motion.a>
-          <motion.a href="https://t" target={"_blank"} 
+          <motion.a href={githubLink} target={"_blank"} 
             whileHover={{y:-2}}
             whileTap={{scale:0.9}}
             className='w-6 ml-3'
@@ -107,6 +114,9 @@ const NavBar = () => {
               :
                 <MoonIcon className={"fill-dark"} />
             }
+          </button>
+          <button onClick={switchLanguage}>
+            {locale === 'es' ? 'Switch to English' : 'Cambiar a Español'}
           </button>
 
         </nav>
@@ -129,14 +139,14 @@ const NavBar = () => {
           </nav>
 
           <nav className='flex items-center justify-center flex-wrap mt-2'>
-            <motion.a href="https://t" target={"_blank"}
+            <motion.a href={githubLink} target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className='w-6 mr-3 bg-light rounded-full dark:bg-dark sx:mx-1'
             >
               <GithubIcon />
             </motion.a>
-            <motion.a href="https://t" target={"_blank"} 
+            <motion.a href={githubLink} target={"_blank"} 
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className='w-6 ml-3 sx:mx-1'

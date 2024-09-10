@@ -1,11 +1,11 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import { TITLE_SKILLS } from './utils/constans'
+import { TITLE_SKILLS } from './utils/constants_es'
 
-const Skills = ({skills}) => {
+const Skill = ({skill}) => {
   return (
-    <>
-      <a href="#" className="group relative block bg-black">
+    <div className="col-span-3 relative h-max mt-20">
+      <button onClick={()=>{}} className="group relative block bg-black">
         <img
           alt=""
           src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
@@ -28,8 +28,18 @@ const Skills = ({skills}) => {
             </div>
           </div>
         </div>
-      </a>
-    </>
+      </button>
+    </div>
+  )
+}
+
+const Skills = ({skills}) => {
+  return (
+    <div className='grid w-full grid-cols-9 gap-16 sm:gap-8'>
+      <Skill />
+      <Skill />
+      <Skill />
+    </div>
   )
 }
 

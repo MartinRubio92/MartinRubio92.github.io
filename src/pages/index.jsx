@@ -1,26 +1,40 @@
+import React, { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import AnimatedText from '@/components/AnimatedText'
-import { LinkArrow } from '@/components/Icons'
-import Layout from '@/components/Layout'
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import profilePic from "../../public/images/profile/01-developer.png"
 import profilePic2 from "../../public/images/profile/developer-pic-2.png"
-import lightBlub from "../../public/images/svgs/miscellaneous_icons_1.svg"
-import React, { useEffect, useRef } from 'react'
-import { useInView, useMotionValue, useSpring } from 'framer-motion'
-import fsPromises from 'fs/promises';
-import path from 'path'
-import Education from '@/components/Education'
-import Experience from '@/components/Experience'
-import Skills from '@/components/Skills'
-import { PRESENTATION_HOME, RESUME_HOME, TEXT_BROWSER, TEXT_META_INDEX, TEXT_ABOUT_PART_1, TEXT_ABOUT_PART_2, TEXT_ABOUT_PART_3, TITLE_ABOUT } from '@/components/utils/constans'
-import { GithubIcon } from '@/components/Icons'
 import project1 from '../../public/images/projects/crypto-screener-cover-image.jpg'
-import { motion } from 'framer-motion'
-import Logo from '@/components/Logo'
+import { GithubIcon, LinkArrow } from '@/components/Icons'
+import { AnimatedText, Education, Experience, Layout, Logo, Skills } from '@/components'
+import { useData } from '@/components/context/DataContext';
 
 const FramerImage = motion(Image);
+
+const AnimatedNumbers = ({ value }) => {
+  const ref = useRef(null);
+
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue])
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    })
+  }, [springValue, value])
+
+  return <span ref={ref}></span>
+}
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -99,26 +113,19 @@ const Project = ({ type, title, img, link, github }) => {
   )
 }
 
-export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'src/components/utils/abouts.json');
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+export default function Home({ }) {
+  const { abouts, translations } = useData();
 
-  const props = {
-    objectData: objectData
-  };
+  if (!abouts || !translations) {
+    return <div>Loading...</div>;
+  }
 
-  return {
-    props: props
-  };
-}
 
-export default function Home({ objectData }) {
   return (
     <>
       <Head>
-        <title>{TEXT_BROWSER}</title>
-        <meta name="description" content={TEXT_META_INDEX} />
+        <title>{translations.TEXT_BROWSER}</title>
+        <meta name="Home" content={translations.TEXT_META_INDEX} />
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light scroll-smooth'>
         <Layout className='pt-0 md:pt-16 sm:pt-8'>
@@ -133,11 +140,11 @@ export default function Home({ objectData }) {
               />
             </div>
             <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
-              <AnimatedText text={PRESENTATION_HOME} className='!text-6xl !text-left
+              <AnimatedText text={translations.PRESENTATION_HOME} className='!text-6xl !text-left
                   xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-2xl sm:!text-3xl
                 '/>
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
-                {RESUME_HOME}
+                {translations.RESUME_HOME}
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link href="/dummy.pdf" target={"_blank"}
@@ -160,19 +167,19 @@ export default function Home({ objectData }) {
 
           {/* About */}
           <section id="about" className="scroll-smooth">
-            <AnimatedText text={TITLE_ABOUT} className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
+            <AnimatedText text={translations.TITLE_ABOUT} className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
             <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
               <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                 <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
 
                 <p className='font-medium'>
-                  {TEXT_ABOUT_PART_1}
+                  {translations.TEXT_ABOUT_PART_1}
                 </p>
                 <p className='my-4 font-medium'>
-                  {TEXT_ABOUT_PART_2}
+                  {translations.TEXT_ABOUT_PART_2}
                 </p>
                 <p className='font-medium'>
-                  {TEXT_ABOUT_PART_3}
+                  {translations.TEXT_ABOUT_PART_3}
                 </p>
               </div>
               <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid borde-dark
@@ -187,7 +194,7 @@ export default function Home({ objectData }) {
               <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
                 <div className='flex flex-col  items-end justify-center xl:items-center'>
                   <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                    <AnimatedNumbers value={objectData.clients} />+
+                    <AnimatedNumbers value={abouts.clients} />+
                   </span>
                   <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
                     satisfied clients
@@ -195,7 +202,7 @@ export default function Home({ objectData }) {
                 </div>
                 <div className='flex flex-col  items-end justify-center xl:items-center'>
                   <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                    <AnimatedNumbers value={objectData.projects} />+
+                    <AnimatedNumbers value={abouts.projects} />+
                   </span>
                   <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
                     projet completed
@@ -203,7 +210,7 @@ export default function Home({ objectData }) {
                 </div>
                 <div className='flex flex-col  items-end justify-center xl:items-center'>
                   <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                    <AnimatedNumbers value={objectData.years} />+
+                    <AnimatedNumbers value={abouts.years} />+
                   </span>
                   <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
                     years of experience
@@ -212,9 +219,9 @@ export default function Home({ objectData }) {
               </div>
             </div>
 
-            <Skills skills={objectData.skills} />
-            <Experience experiences={objectData.experiences} />
-            <Education educations={objectData.educations} />
+            <Skills skills={abouts.skills} />
+            <Experience experiences={abouts.experiences} />
+            <Education educations={abouts.educations} />
           </section>
 
           <section id="projects" className="scroll-smooth">
@@ -259,28 +266,4 @@ export default function Home({ objectData }) {
       </main>
     </>
   )
-}
-
-const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
-
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue])
-
-  useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
-      }
-    })
-  }, [springValue, value])
-
-  return <span ref={ref}></span>
 }

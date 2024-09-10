@@ -7,7 +7,7 @@ import React from 'react'
 import project1 from '../../public/images/projects/crypto-screener-cover-image.jpg'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import TransitionEffect from '@/components/TransitionEffect'
+import TransitionEffect from '@/components/viejo/TransitionEffect'
 
 const FramerImage = motion(Image);
 

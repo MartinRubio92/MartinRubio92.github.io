@@ -1,0 +1,20 @@
+export const translations = {
+    TITLE_PRESENTATION_HOME: "Transformamos ideas en soluciones digitales reales.",
+    RESUME_HOME: "En VC Tech, llevamos la tecnología más allá de las ideas, desarrollando soluciones digitales innovadoras e impactantes para ayudarte a crecer y tener éxito.",
+    ABOUT_US_BUTTON: "Conócenos",
+    OUR_SERVICES_BUTTON: "Explora Nuestros Servicios",
+    TITLE_ABOUT: "Acerca de Nosotros",
+    TEXT_ABOUT_PART_1: "Somos un equipo innovador apasionado por transformar ideas digitales en realidades tangibles. Con años de experiencia en la industria tecnológica, nos esforzamos por ofrecer soluciones únicas adaptadas a las necesidades de cada cliente.",
+    TEXT_ABOUT_PART_2: "Desde sitios web hasta aplicaciones móviles y tecnologías de vanguardia, nuestro trabajo gira en torno a la creatividad y la practicidad para garantizar el éxito del cliente.",
+    TEXT_ABOUT_PART_3: "Nuestro objetivo es crear soluciones impactantes que fomenten el crecimiento y la innovación, brindando experiencias de usuario excepcionales y avances tecnológicos.",
+    TITLE_OUR_SERVICES: "Nuestros Servicios",
+    SERVICE_WEB_DEVELOPMENT: "Desarrollo Web",
+    SERVICE_WEB_DEVELOPMENT_DESCRIPTION: "Sitios web personalizados que combinan estética con funcionalidad para garantizar un rendimiento óptimo y satisfacción del usuario.",
+    SERVICE_MOBILE_APPS: "Aplicaciones Móviles",
+    SERVICE_MOBILE_APPS_DESCRIPTION: "Desarrollamos soluciones móviles que se adaptan a las necesidades actuales de los usuarios, garantizando rendimiento y usabilidad.",
+    SERVICE_ECOMMERCE: "Soluciones E-commerce",
+    SERVICE_ECOMMERCE_DESCRIPTION: "Ayudamos a las empresas a vender en línea con plataformas de e-commerce robustas, escalables y seguras.",
+    CONTACT_US: "Contáctanos",
+    FOOTER_COPYRIGHT: "© 2024 VC Tech. Todos los derechos reservados.export cons",
+    TEXT_BROWSER : "text"
+};

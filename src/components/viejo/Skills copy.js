@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import { TITLE_SKILLS } from './utils/constans'
+import { TITLE_SKILLS } from '../utils/constants_es'
 
 const Skill = ({name, x, y}) => {
   return (

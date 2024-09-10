@@ -8,7 +8,7 @@ import article3 from "../../public/images/articles/create modal component in rea
 import article4 from "../../public/images/articles/form validation in reactjs using custom react hook.png"
 import Image from 'next/image'
 import Link from 'next/link'
-import TransitionEffect from '@/components/TransitionEffect'
+import TransitionEffect from '@/components/viejo/TransitionEffect'
 
 const FramerImage = motion(Image);
 
