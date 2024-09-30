@@ -1,5 +1,5 @@
 import React from 'react'
-import projectPortfolio from "../shared/Images/project_portfolio.png"
+import projectPortfolio from "../shared/Images/project_portfolio.PNG"
 import { AnimatedText, Project, FeaturedProjects } from '@/components'
 import { useData } from '../context/DataContext'
 

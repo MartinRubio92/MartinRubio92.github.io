@@ -42,6 +42,3 @@ export { NodeLogo } from './shared/Icons/Skills/NodeJs_v3';
 export { Python } from './shared/Icons/Skills/Python';
 export { ReactLogo } from './shared/Icons/Skills/ReactLogo';
 export { Tailwind } from './shared/Icons/Skills/Tailwind';
-
-// Imagenes
-export { default as projectPortfolio } from "./shared/Images/project_portfolio.png"
