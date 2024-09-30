@@ -7,7 +7,7 @@
 Este es mi portafolio personal, construido con **Next.js**, **Tailwind CSS**, y **Framer Motion**, que destaca mi experiencia como **Desarrollador Full Stack** y **Frontend Developer**. En este proyecto, me enfoqué en crear una plataforma fácilmente actualizable para compartir mi experiencia profesional, habilidades, y proyectos.
 
 Puedes visitar el portafolio en el siguiente enlace:  
-[Ver Portafolio](https://martinrubio.dev)
+[Ver Portafolio](https://martinrubio92.github.io/)
 
 ## Acerca de Mí
 
@@ -36,13 +36,6 @@ Algunas de las tecnologías con las que trabajo son:
 Un portafolio profesional creado para mostrar mi trabajo y habilidades. El proyecto fue diseñado para ser fácilmente actualizable y utiliza **Next.js** junto con **Tailwind CSS** para garantizar una experiencia fluida tanto en dispositivos móviles como de escritorio.
 
 - **GitHub:** [Código del Portafolio](https://github.com/MartinRubio92/portfolio)
-
-## Capturas de Pantalla
-
-![Portafolio Home](https://github.com/MartinRubio92/portfolio/blob/main/website-images/home-light-desktop.png)
-![Portafolio Dark Mode](https://github.com/MartinRubio92/portfolio/blob/main/website-images/home-dark-desktop.png)
-![About Page](https://github.com/MartinRubio92/portfolio/blob/main/website-images/about-light-desktop.png)
-![Projects Page](https://github.com/MartinRubio92/portfolio/blob/main/website-images/projects-dark-desktop.png)
 
 ## Conéctate Conmigo
 
