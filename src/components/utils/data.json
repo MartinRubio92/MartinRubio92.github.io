@@ -2,25 +2,37 @@
   "clients": 1,
   "projects": 1,
   "years": 7,
-  "experiences":
-  [
+  "experiences": [
     {
-      "position": "Developer Full Stack",
+      "position": "Desarrollador Full Stack",
       "company": "IT Resources",
       "time": "2016-2021",
       "address": "Buenos Aires",
-      "work": "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+      "work": "Como Desarrollador Full Stack, fui responsable del desarrollo de servicios REST, procesos BPM y interfaces web utilizando tecnologías como JavaScript, Handlebars, MySQL, MyBatis, y JBPM. Participé en el diseño y desarrollo de soluciones para sistemas de gestión integral, trabajando estrechamente con el equipo técnico para garantizar la calidad del código y la eficiencia del software."
     },
     {
-      "position": "Developer Full Stack",
+      "position": "Líder Técnico",
+      "company": "IT Resources",
+      "time": "2018-2021",
+      "address": "Buenos Aires",
+      "work": "Durante mi etapa como Líder Técnico, supervisé al equipo de desarrollo en el proyecto para Swiss Medical, un sistema financiero que implementaba soluciones innovadoras para la gestión y atención al cliente. Además, trabajé en la creación de procesos batch utilizando Java, Spring Boot y Spring Batch, garantizando el cumplimiento de los requerimientos del cliente. Mi rol incluyó la planificación, coordinación y seguimiento de tareas para asegurar entregas de alta calidad dentro de los plazos estipulados."
+    },
+    {
+      "position": "Desarrollador Full Stack",
       "company": "Bizit Global",
-      "time": "2021-Present",
-      "address": "Cordoba",
-      "work": "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+      "time": "2021-2023",
+      "address": "Córdoba - remoto",
+      "work": "Trabajé en el desarrollo de nuevas características para una plataforma de call center financiero, utilizando tecnologías como Java, Spring Boot, y Spring Batch. También contribuí al mantenimiento y mejora continua de la plataforma, asegurando su estabilidad y escalabilidad."
+    },
+    {
+      "position": "Desarrollador Frontend",
+      "company": "Equila SRL",
+      "time": "2023-Actualidad",
+      "address": "Córdoba - remoto",
+      "work": "Estoy desarrollando una billetera virtual para Android, iOS y web, respaldada por Banco Formosa y Movilcash. Mi responsabilidad principal es el desarrollo frontend, asegurando que la experiencia del usuario sea óptima tanto en la web como en plataformas móviles. Utilizo tecnologías modernas y trabajo de manera colaborativa con el equipo para alcanzar los objetivos del proyecto."
     }
   ],
-  "educations":
-  [
+  "educations": [
     {
       "type": "Ingeniería en Informática",
       "place": "UNDAV (Universidad Nacional de Avellaneda)",
@@ -34,62 +46,61 @@
       "info": "Colegio tecnico de muy buen nivel, donde empece a conocer sobre la programacion con PIC con Assembler y principios de C"
     }
   ],
-  "skills":
-  [
+  "skills": [
     {
-      "name": "JAVA",
-      "x": "-25vw",
-      "y": "2vw"
-    },
-    {
-      "name": "JS",
-      "x": "-15vw",
-      "y": "10vw"
-    },
-    {
-      "name": "HTML",
-      "x": "20vw",
-      "y": "6vw"
-    },
-    {
-      "name": "CSS",
-      "x": "0vw",
-      "y": "12vw"
+      "name": "JavaScript",
+      "iconComponent": "JsSkill",
+      "experience": "7",
+      "descripcion": ""
     },
     {
       "name": "ReactJS",
-      "x": "-20vw",
-      "y": "-15vw"
+      "iconComponent": "ReactLogo",
+      "experience": "3",
+      "descripcion": ""
     },
     {
       "name": "NextJS",
-      "x": "15vw",
-      "y": "-12vw"
+      "iconComponent": "NextjsIcon",
+      "experience": "2",
+      "descripcion": ""
+    },
+    
+    {
+      "name": "Java",
+      "iconComponent": "Java",
+      "experience": "7",
+      "descripcion": ""
+    },
+    {
+      "name": "Python",
+      "iconComponent": "Python",
+      "experience": "3",
+      "descripcion": ""
+    },
+    {
+      "name": "HTML",
+      "iconComponent": "HTML",
+      "experience": "7",
+      "descripcion": ""
+    },
+    {
+      "name": "CSS",
+      "iconComponent": "CSS",
+      "experience": "7",
+      "descripcion": ""
     },
     {
       "name": "Tailwind CSS",
-      "x": "32vw",
-      "y": "-5vw"
-    },
-    {
-      "name": "Web Design",
-      "x": "0vw",
-      "y": "-20vw"
-    },
-    {
-      "name": "API Design",
-      "x": "15vw",
-      "y": "20vw"
-    },
-    {
-      "name": "Firebase",
-      "x": "-25vw",
-      "y": "10vw"
+      "iconComponent": "Tailwind",
+      "experience": "2",
+      "descripcion": ""
     }
   ],
   "links": {
     "github": "https://github.com/MartinRubio92",
     "linkedin": "https://www.linkedin.com/MartinRubio",
     "instagram": ""
-  }
+  },
+  "email": "martin.l.rubio92@gmail.com"
 }

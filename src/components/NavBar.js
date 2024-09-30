@@ -1,73 +1,18 @@
 import React, { useState } from 'react'
-import { useRouter } from 'next/router';
-import Link from 'next/link'
-import { motion } from "framer-motion";
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons';
-import useThemeSwitcher from './hooks/useThemeSwitcher';
-import { useData } from './context/DataContext';
+import { useData } from '@/components/context/DataContext';
+import { NavbarMobile, NavbarLaptop } from '@/components';
 
-const CustomLink = ({href, title, className=""}) => {
-  const router = useRouter();
-
-  return (
-    <Link href={href} scroll={false} className={`${className} relative group`}>
-      {title}
-      <span 
-        className={`
-          h-[1px] inline-bloc bg-dark
-          absolute left-0 -bottom-0.5
-          group-hover:w-full transition-[width] ease duration-300
-          ${router.asPath === href ? "w-full" : "w-0"} 
-          dark:bg-light
-        `}
-      >
-        &nbsp;
-      </span>
-    </Link>
-  )
-}
-
-const CustomMobileLink = ({href, title, className="", toggle}) => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    toggle();
-    router.push(href);
-  }
-
-  return (
-    <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
-      {title}
-      <span 
-        className={`
-          h-[1px] inline-bloc bg-light
-          absolute left-0 -bottom-0.5
-          group-hover:w-full transition-[width] ease duration-300
-          ${router.asPath === href ? "w-full" : "w-0"} 
-          dark:bg-dark
-        `}
-      >
-        &nbsp;
-      </span>
-    </button>
-  )
-}
-
-const NavBar = ( ) => {
-  const { abouts, translations, locale, setLocale } = useData();
+export const NavBar = ( ) => {
+  const { data, locale, setLocale } = useData();
 
   const switchLanguage = () => {
     setLocale(locale === 'es' ? 'en' : 'es');
   };
-
-  const [mode, setMode] = useThemeSwitcher();
+  
   const [isOpen, setIsOpen] = useState(false);
-
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
   }
-
-  const githubLink = abouts?.links?.github || '#';
 
   return (
     <header className='w-fulll px-32 py-8 font-medium flex items-center justify-between
@@ -78,105 +23,10 @@ const NavBar = ( ) => {
         <span className={` bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'} `}></span>
         <span className={` bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'} `}></span>
       </button>
-      
-      <div className='w-full flex justify-between items-center lg:hidden'>
-        <nav>
-          <CustomLink href="#home" title="Home" className='mr-4' />
-          <CustomLink href="#about" title="About" className='mx-4' />
-          <CustomLink href="#projects" title="Projects" className='mx-4' />
-        </nav>
-
-        <nav className='flex items-center justify-center flex-wrap'>
-          <motion.a href={githubLink} target={"_blank"}
-            whileHover={{y:-2}}
-            whileTap={{scale:0.9}}
-            className='w-6 mr-3'
-          >
-            <GithubIcon />
-          </motion.a>
-          <motion.a href={githubLink} target={"_blank"} 
-            whileHover={{y:-2}}
-            whileTap={{scale:0.9}}
-            className='w-6 ml-3'
-          >
-            <LinkedInIcon />
-          </motion.a>
-
-          <button
-            onClick={ () => setMode(mode === "light" ? "dark" : "light") }
-            className={`ml-3 flex items-center justify-center rounded-full p-1 
-              ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-            `}
-          >
-            {
-              mode === "dark" ?
-                <SunIcon className={"fill-dark"} />
-              :
-                <MoonIcon className={"fill-dark"} />
-            }
-          </button>
-          <button onClick={switchLanguage}>
-            {locale === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-          </button>
-
-        </nav>
-      </div>
-
+      <NavbarLaptop data={data} switchLanguage={switchLanguage} locale={locale} />
       {
-        isOpen ? 
-
-        <motion.div 
-          initial={{ scale:0, opacity:0, x:"-50%", y:"-50%" }}
-          animate={{ scale:1, opacity:1 }}
-          className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
-        '>
-
-          <nav className='flex items-center flex-col justify-center'>
-            <CustomMobileLink href="#home" title="Home" className='' toggle={handleIsOpen} />
-            <CustomMobileLink href="#about" title="About" className='' toggle={handleIsOpen} />
-            <CustomMobileLink href="#projects" title="Projects" className='' toggle={handleIsOpen} />
-          </nav>
-
-          <nav className='flex items-center justify-center flex-wrap mt-2'>
-            <motion.a href={githubLink} target={"_blank"}
-              whileHover={{y:-2}}
-              whileTap={{scale:0.9}}
-              className='w-6 mr-3 bg-light rounded-full dark:bg-dark sx:mx-1'
-            >
-              <GithubIcon />
-            </motion.a>
-            <motion.a href={githubLink} target={"_blank"} 
-              whileHover={{y:-2}}
-              whileTap={{scale:0.9}}
-              className='w-6 ml-3 sx:mx-1'
-            >
-              <LinkedInIcon />
-            </motion.a>
-
-            <button
-              onClick={ () => setMode(mode === "light" ? "dark" : "light") }
-              className={`ml-3 flex items-center justify-center rounded-full p-1 
-                ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-              `}
-            >
-              {
-                mode === "dark" ?
-                  <SunIcon className={"fill-dark"} />
-                :
-                  <MoonIcon className={"fill-dark"} />
-              }
-            </button>
-
-          </nav>
-        </motion.div>
-
-        : null
-
+        isOpen ? <NavbarMobile /> : null
       }
-      
     </header>
   )
 }
-
-export default NavBar

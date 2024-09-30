@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, useContext } from 'react';
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [abouts, setAbouts] = useState({});
+  const [data, setData] = useState({});
   const [translations, setTranslations] = useState({});
   const [locale, setLocale] = useState('es');
 
@@ -18,18 +18,18 @@ export const DataProvider = ({ children }) => {
       }
     };
 
-    const loadAbouts = async () => {
+    const loadData = async () => {
       // eslint-disable-next-line @next/next/no-assign-module-variable
       const module = await import('@/components/utils/data.json');
-      setAbouts(module.default || module);
+      setData(module.default || module);
     };
 
     loadTranslations();
-    loadAbouts();
+    loadData();
   }, [locale]);
 
   return (
-    <DataContext.Provider value={{ abouts, translations, locale, setLocale }}>
+    <DataContext.Provider value={{ data, translations, locale, setLocale }}>
       {children}
     </DataContext.Provider>
   );

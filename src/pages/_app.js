@@ -1,11 +1,10 @@
 import '@/styles/globals.css'
-import { AnimatePresence } from 'framer-motion';
 import { Montserrat } from "next/font/google"
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import NavBar from '@/components/NavBar';
-import Footer from '@/components/Footer';
+import { AnimatePresence } from 'framer-motion';
 import { DataProvider } from '@/components/context/DataContext';
+import { Footer, NavBar } from '@/components';
 
 const monsterrat = Montserrat({
   subsets: ["latin"],
