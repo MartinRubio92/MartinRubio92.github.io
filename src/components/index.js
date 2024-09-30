@@ -44,4 +44,4 @@ export { ReactLogo } from './shared/Icons/Skills/ReactLogo';
 export { Tailwind } from './shared/Icons/Skills/Tailwind';
 
 // Imagenes
-export {default as projectPortfolio} from "@/../public/images/projects/project_portfolio.png"
+export { default as projectPortfolio } from "./shared/Images/project_portfolio.png"
