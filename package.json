@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d build"
+    "build": "next build && next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "eslint": "8.36.0",
