@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, CustomMobileLink } from '../CircularText';
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, CustomMobileLink } from '@/components';
 
 export const NavbarMobile = () => {
   return (
