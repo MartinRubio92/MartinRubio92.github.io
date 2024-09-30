@@ -1,14 +1,11 @@
 {
-  "homepage": "https://MartinRubio92.github.io",
   "name": "developer-portfolio-starter-code",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint",
-    "build": "next build && next export",
-    "deploy": "gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "eslint": "8.36.0",
