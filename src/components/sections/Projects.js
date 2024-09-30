@@ -1,6 +1,6 @@
 import React from 'react'
-import project1 from "@/../public/images/projects/project_portfolio.png"
-import { AnimatedText, Project, FeaturedProjects, projectPortfolio } from '@/components'
+import projectPortfolio from "../shared/Images/project_portfolio.png"
+import { AnimatedText, Project, FeaturedProjects } from '@/components'
 import { useData } from '../context/DataContext'
 
 const Projects = () => {
