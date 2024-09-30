@@ -48,7 +48,7 @@ const About = () => {
           </div>
           <div className='flex flex-col  items-end justify-center xl:items-center'>
             <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-              <AnimatedNumbers value={data.projects} />+
+              <AnimatedNumbers value={data.projects_cant} />+
             </span>
             <h2 className='text-x1 font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:test-sm'>
               {translations.PROJECT_COMPLETED}

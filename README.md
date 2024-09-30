@@ -1,45 +1,51 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# Martín Rubio - Professional Portfolio 🌟
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
+![GitHub stars](https://img.shields.io/github/stars/MartinRubio92/portfolio?style=social)&nbsp;&nbsp;
+![GitHub forks](https://img.shields.io/github/forks/MartinRubio92/portfolio?style=social)&nbsp;&nbsp;
+![Github Followers](https://img.shields.io/github/followers/MartinRubio92.svg?style=social&label=Follow)&nbsp;&nbsp;
 
-This repository contains starter code for Portfolio website created using NextJs. <br />
+Este es mi portafolio personal, construido con **Next.js**, **Tailwind CSS**, y **Framer Motion**, que destaca mi experiencia como **Desarrollador Full Stack** y **Frontend Developer**. En este proyecto, me enfoqué en crear una plataforma fácilmente actualizable para compartir mi experiencia profesional, habilidades, y proyectos.
 
-For Demo and Final Code checkout following link👇: <br />
-[Nextjs Portfolio Website](https://devdreaming.com//videos/nextjs-tutorial-build-portfolio-tailwind-css-framer-motion#code-links) <br />
+Puedes visitar el portafolio en el siguiente enlace:  
+[Ver Portafolio](https://martinrubio.dev)
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/Yw7yWHigGKI <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/Yw7yWHigGKI?style=social)](https://youtu.be/Yw7yWHigGKI)<br />
+## Acerca de Mí
 
-<h3 align="left">▶ Support me via:</h3><br />
-<p><a href="https://www.buymeacoffee.com/CodeBucks" target="_blank"> <img  src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" height="50" width="210" alt="CodeBucks" ></img></a></p><br />
+Soy un Desarrollador Full Stack con **7 años de experiencia**, especializado en el desarrollo tanto de frontend como de backend. Mi carrera incluye roles como **Líder Técnico** y **Desarrollador Frontend**, trabajando en soluciones innovadoras para sistemas financieros y plataformas de call centers.
 
-### Images of The Portfolio Website:
+- **Años de experiencia:** 7  
+- **Clientes atendidos:** 1  
+- **Posición actual:** Desarrollador Frontend en Equila SRL  
+- **Ubicación:** Córdoba, Argentina (Remoto)
 
-![Nextjs Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-light-desktop.png)
-![Nextjs Portfolio Website Dark Mode](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-dark-desktop.png)
-![Next.js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-desktop.png)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-dark-desktop.png)
-![Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-desktop.png)
-![Responsive Portfolio Website In Nextjs](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-mobile.png)
-![Responsive Portfolio Website In Next js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-light-mobile.png)
-![Mobile Responsive Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-mobile.png)
+## Tecnologías
 
+Algunas de las tecnologías con las que trabajo son:
 
-### Resources Used in This Project
+- **JavaScript**
+- **ReactJS**
+- **NextJS**
+- **Java**
+- **Python**
+- **HTML/CSS**
+- **Tailwind CSS**
 
-- Profile image in the home page created by using https://www.midjourney.com/ tool.
-- Profile image in the about page by [Albert Dera](https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
-on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-- Fonts from https://fonts.google.com/ <br />
-- Icons from https://iconify.design/ <br />
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
+## Proyectos
 
-### External Libraries used in this project:
+### Portafolio Personal
+Un portafolio profesional creado para mostrar mi trabajo y habilidades. El proyecto fue diseñado para ser fácilmente actualizable y utiliza **Next.js** junto con **Tailwind CSS** para garantizar una experiencia fluida tanto en dispositivos móviles como de escritorio.
 
-- [framer-motion](https://www.framer.com/motion/) <br />
-- [Tailwind css](https://tailwindcss.com/) <br />
+- **GitHub:** [Código del Portafolio](https://github.com/MartinRubio92/portfolio)
 
+## Capturas de Pantalla
 
+![Portafolio Home](https://github.com/MartinRubio92/portfolio/blob/main/website-images/home-light-desktop.png)
+![Portafolio Dark Mode](https://github.com/MartinRubio92/portfolio/blob/main/website-images/home-dark-desktop.png)
+![About Page](https://github.com/MartinRubio92/portfolio/blob/main/website-images/about-light-desktop.png)
+![Projects Page](https://github.com/MartinRubio92/portfolio/blob/main/website-images/projects-dark-desktop.png)
+
+## Conéctate Conmigo
+
+- **GitHub:** [MartinRubio92](https://github.com/MartinRubio92)
+- **LinkedIn:** [Martín Rubio](https://www.linkedin.com/MartinRubio)
+- **Email:** martin.l.rubio92@gmail.com

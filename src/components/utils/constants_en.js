@@ -1,4 +1,5 @@
 export const translations = {
+	LENGUAGE: "en",
 	TITLE_PRESENTATION_HOME: "We turn ideas into real digital solutions.",
 	RESUME_HOME: `
 		Hi there!
@@ -44,5 +45,7 @@ export const translations = {
 	SATISFIED_CLIENTS: "satisfied clients",
 	PROJECT_COMPLETED: "projet completed",
 	YEARS_EXPERIENCE: "years of experience",
-	TITLE_SKILLS: "Skills"
+	TITLE_SKILLS: "Skills",
+	TITLE_EDUCATION: "Education",
+	TITLE_EXPERIENCE: "Experience"
 };

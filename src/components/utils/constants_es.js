@@ -1,4 +1,5 @@
 export const translations = {
+	LENGUAGE: "es",
 	TITLE_PRESENTATION_HOME: "Transformamos ideas en soluciones digitales reales.",
 	RESUME_HOME: `
 		¡Hola! 

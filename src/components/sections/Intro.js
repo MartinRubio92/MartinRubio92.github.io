@@ -24,7 +24,7 @@ const Intro = () => {
           {translations.RESUME_HOME}
         </p>
         <div className='flex items-center justify-center mt-2 lg:justify-center'>
-          <Link href="/dummy.pdf" target={"_blank"}
+          <Link href="/MartinRubioCV.pdf" target={"_blank"}
             className='
               flex items-center bg-dark text-light p-2.5 px-6
               rounded-lg text-base font-semibold hover:bg-light hover:text-dark

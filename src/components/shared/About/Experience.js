@@ -3,7 +3,7 @@ import { motion, useScroll } from 'framer-motion'
 import { LiIcon } from '@/components'
 import { useData } from '@/components/context/DataContext';
 
-const Details = ({position, company, companyLink, time, address, work}) => {
+const Details = ({experience, translations}) => {
   const ref = useRef(null);
 
   return (
@@ -14,17 +14,17 @@ const Details = ({position, company, companyLink, time, address, work}) => {
         whileInView={{ y:0 }}
         transition={{ duration:0.5, type:"spring" }}
       >
-        <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>{position}&nbsp;
-          <a href={companyLink}
+        <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>{translations?.LENGUAGE == "es" ? experience?.position_es : experience?.position_en}&nbsp;
+          <a href={"/"}
             target='_blank'
             className='text-primary dark:text-primaryDark capitalize'
-          >@{company}</a>
+          >@{experience?.company}</a>
         </h3>
         <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
-          {time} | {address}
+          {experience?.time} | {experience?.address}
         </span>
         <p className='font-medium w-full md:text-sm'> 
-          {work} 
+          {translations?.LENGUAGE == "es" ? experience?.work_es : experience?.work_en} 
         </p>
       </motion.div>
     </li>
@@ -48,7 +48,7 @@ const Experience = ({experiences}) => {
   return (
     <div className='my-32'>
       <h2 className='font-hold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
-      {translations.TITLE_EXPERIENCE}
+        {translations.TITLE_EXPERIENCE}
       </h2>
 
       <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
@@ -60,8 +60,8 @@ const Experience = ({experiences}) => {
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
 
-          {experiences.map((detail) => (
-            <Details key={detail.position} {...detail} />
+          {experiences.map((experience, index) => (
+            <Details key={index} experience={experience} translations={translations} />
           ))}
 
         </ul>
