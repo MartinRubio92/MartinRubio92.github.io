@@ -3,13 +3,22 @@
   "years": 7,
   "experiences": [
     {
+      "position_es": "Desarrollador Frontend",
+      "position_en": "Frontend Developer",
+      "company": "Equila SRL",
+      "time": "2023-Actualidad",
+      "address": "remoto",
+      "work_es": "Estoy desarrollando una billetera virtual para Android, iOS y web, respaldada por Banco Formosa y Movilcash. Mi responsabilidad principal es el desarrollo frontend, asegurando que la experiencia del usuario sea óptima tanto en la web como en plataformas móviles. Utilizo tecnologías modernas y trabajo de manera colaborativa con el equipo para alcanzar los objetivos del proyecto.",
+      "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
+    },
+    {
       "position_es": "Desarrollador Full Stack",
       "position_en": "Full Stack Developer",
-      "company": "IT Resources",
-      "time": "2016-2021",
-      "address": "Buenos Aires",
-      "work_es": "Como Desarrollador Full Stack, fui responsable del desarrollo de servicios REST, procesos BPM y interfaces web utilizando tecnologías como JavaScript, Handlebars, MySQL, MyBatis, y JBPM. Participé en el diseño y desarrollo de soluciones para sistemas de gestión integral, trabajando estrechamente con el equipo técnico para garantizar la calidad del código y la eficiencia del software.",
-      "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
+      "company": "Bizit Global",
+      "time": "2021-2023",
+      "address": "Córdoba - remoto",
+      "work_es": "Trabajé en el desarrollo de nuevas características para una plataforma de call center financiero, utilizando tecnologías como Java, Spring Boot, y Spring Batch. También contribuí al mantenimiento y mejora continua de la plataforma, asegurando su estabilidad y escalabilidad.",
+      "work_en": "I worked on developing new features for a financial call center platform, using technologies such as Java, Spring Boot, and Spring Batch. I also contributed to the maintenance and continuous improvement of the platform, ensuring its stability and scalability."
     },
     {
       "position_es": "Líder Técnico",
@@ -23,19 +32,10 @@
     {
       "position_es": "Desarrollador Full Stack",
       "position_en": "Full Stack Developer",
-      "company": "Bizit Global",
-      "time": "2021-2023",
-      "address": "Córdoba - remoto",
-      "work_es": "Trabajé en el desarrollo de nuevas características para una plataforma de call center financiero, utilizando tecnologías como Java, Spring Boot, y Spring Batch. También contribuí al mantenimiento y mejora continua de la plataforma, asegurando su estabilidad y escalabilidad.",
-      "work_en": "I worked on developing new features for a financial call center platform, using technologies such as Java, Spring Boot, and Spring Batch. I also contributed to the maintenance and continuous improvement of the platform, ensuring its stability and scalability."
-    },
-    {
-      "position_es": "Desarrollador Frontend",
-      "position_en": "Frontend Developer",
-      "company": "Equila SRL",
-      "time": "2023-Actualidad",
-      "address": "Córdoba - remoto",
-      "work_es": "Estoy desarrollando una billetera virtual para Android, iOS y web, respaldada por Banco Formosa y Movilcash. Mi responsabilidad principal es el desarrollo frontend, asegurando que la experiencia del usuario sea óptima tanto en la web como en plataformas móviles. Utilizo tecnologías modernas y trabajo de manera colaborativa con el equipo para alcanzar los objetivos del proyecto.",
+      "company": "IT Resources",
+      "time": "2016-2021",
+      "address": "Buenos Aires",
+      "work_es": "Como Desarrollador Full Stack, fui responsable del desarrollo de servicios REST, procesos BPM y interfaces web utilizando tecnologías como JavaScript, Handlebars, MySQL, MyBatis, y JBPM. Participé en el diseño y desarrollo de soluciones para sistemas de gestión integral, trabajando estrechamente con el equipo técnico para garantizar la calidad del código y la eficiencia del software.",
       "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
     }
   ],
