@@ -24,7 +24,7 @@ export const NavbarLaptop = ({data, switchLanguage, locale}) => {
         >
           <GithubIcon />
         </motion.a>
-        <motion.a href={githubLink} target={"_blank"}
+        <motion.a href={linkedin} target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 ml-3'
