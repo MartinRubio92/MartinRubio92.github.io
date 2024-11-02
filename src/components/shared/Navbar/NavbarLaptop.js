@@ -6,6 +6,7 @@ import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, CustomLink } from '@/compo
 export const NavbarLaptop = ({data, switchLanguage, locale}) => {
   const [mode, setMode] = useThemeSwitcher();
   const githubLink = data?.links?.github || '#';
+  const linkedin = data?.links?.linkedin || '#';
 
   return (
     <div className='w-full flex justify-between items-center lg:hidden'>
