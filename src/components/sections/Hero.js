@@ -5,11 +5,11 @@ import profilePic from "@/../public/images/profile/01-developer.png"
 import { AnimatedText, LinkArrow } from '@/components'
 import { useData } from '../context/DataContext'
 
-const Intro = () => {
+const Hero = () => {
   const { data, translations } = useData();
   const mail = "mailto:" + data.email;
   return (
-    <section id="home" className='flex items-center justify-between w-full lg:flex-col scroll-smooth'>
+    <section id="home" className='flex items-center justify-between w-full lg:flex-col scroll-smooth pt-20'>
       <div className='w-1/2 md:w-full'>
         <Image src={profilePic} alt="CodeBucjs" className='"w-full h-auto lg:hidden md:inline-block md:w-full'
           priority
@@ -36,10 +36,10 @@ const Intro = () => {
           >
             {translations.DOWNLOAD_CV} <LinkArrow className={"w-6 ml-0.5"} />
           </Link>
-          <Link href={mail} target={"_blank"}
+          <Link href={`https://mail.google.com/mail/?view=cm&to=${data.email}`} target={"_blank"}
             className='ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base
               p-2 rounded-lg hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark'>
-            Contact
+            {translations.CONTACT_US}
           </Link>
         </div>
 
@@ -48,4 +48,4 @@ const Intro = () => {
   )
 }
 
-export default Intro;
+export default Hero;

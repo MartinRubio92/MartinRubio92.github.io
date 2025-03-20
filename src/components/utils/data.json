@@ -1,4 +1,11 @@
 {
+  "alias": "Martin Rubio",
+  "links": {
+    "github": "https://github.com/MartinRubio92",
+    "linkedin": "https://www.linkedin.com/in/martin-rubio-242248162/",
+    "instagram": ""
+  },
+  "email": "martin.l.rubio92@gmail.com",
   "clients": 1,
   "years": 7,
   "experiences": [
@@ -74,7 +81,6 @@
       "experience": "2",
       "descripcion": ""
     },
-    
     {
       "name": "Java",
       "iconComponent": "Java",
@@ -106,22 +112,37 @@
       "descripcion": ""
     }
   ],
-  "links": {
-    "github": "https://github.com/MartinRubio92",
-    "linkedin": "https://www.linkedin.com/in/martin-rubio-242248162/",
-    "instagram": ""
-  },
-  "email": "martin.l.rubio92@gmail.com",
-  "projects_cant": 1,
+  "projects_cant": 3,
   "projects": [
+    {
+      "name": "E-Commerce con Vendure",
+      "descripcion_es": "e-commerce diseñado para ofrecer una experiencia de compra rápida y fluida. Construido con Next.js y Tailwind CSS en el frontend, el sitio es completamente responsive y garantiza una navegación optimizada tanto en dispositivos móviles como en escritorio. En el backend, emplea Vendure para la gestión de productos, inventario y pedidos, y se integra con PostgreSQL como base de datos, asegurando la fiabilidad y escalabilidad de la plataforma.",
+      "descripcion_en": "e-commerce designed to offer a fast and fluid purchasing experience. Built with Next.js and Tailwind CSS on the frontend, the site is fully responsive and ensures optimized navigation on both mobile and desktop devices. On the backend, it uses Vendure for product, inventory and order management, and integrates with PostgreSQL as a database, ensuring the reliability and scalability of the platform.",
+      "image": "ecommerceImage",
+      "type": "Project",
+      "github": "https://github.com/villacentenariotech/front_ecommerce",
+      "link": "https://front-ecommerce-ashy.vercel.app/",
+      "code_type": "1"
+    },
     {
       "name": "Portfolio",
       "descripcion_es": "Un portfolio profecional creado con NextJS y Tailwind CSS. Desarrollado para su facil actualización",
       "descripcion_en": "A professional portfolio built with Next JS and Tailwind CSS. Built for easy updating",
-      "image": "project_portfolio",
+      "image": "portfolioImage",
       "type": "Project",
-      "github": "https://github.com/MartinRubio92/portfolio",
-      "link": ""
+      "github": "https://github.com/MartinRubio92/MartinRubio92.github.io",
+      "link": "https://martinrubio92.github.io/",
+      "code_type": "2"
+    },
+    {
+      "name": "Portfolio VCTech",
+      "descripcion_es": "Un portfolio profecional creado con NextJS y Tailwind CSS. Desarrollado para su facil actualización",
+      "descripcion_en": "A professional portfolio built with Next JS and Tailwind CSS. Built for easy updating",
+      "image": "portfolioVCTImage",
+      "type": "Project",
+      "github": "https://github.com/villacentenariotech/villacentenariotech.github.io",
+      "link": "https://villacentenariotech.github.io/",
+      "code_type": "2"
     }
   ]
 }

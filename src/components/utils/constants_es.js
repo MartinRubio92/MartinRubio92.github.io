@@ -1,5 +1,12 @@
 export const translations = {
 	LENGUAGE: "es",
+
+	// Navbar
+	NAVBAR_HOME: "Home",
+	NAVBAR_ABOUT: "Conóceme",
+	NAVBAR_SKILLS: "Skills",
+	NAVBAR_PROJECTS: "Projectos",
+
 	TITLE_PRESENTATION_HOME: "Transformamos ideas en soluciones digitales reales.",
 	RESUME_HOME: `
 		¡Hola! 
@@ -41,5 +48,10 @@ export const translations = {
 	YEARS_EXPERIENCE: "años de experiencia",
 	TITLE_SKILLS: "Skills",
 	TITLE_EDUCATION: "Educación",
-	TITLE_EXPERIENCE: "Experiencia"
+	TITLE_EXPERIENCE: "Experiencia",
+
+	// Footer
+	RIGHTS_RESERVED: "Todos los derechos reservados.",
+	BUILD_WITH: "Creado por",
+	SAY_HELLO: "Hablemos",
 };

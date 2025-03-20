@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Layout, Logo } from '@/components'
 import { useData } from '@/components/context/DataContext';
-import Intro from '@/components/sections/Intro';
+import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
 
@@ -24,14 +24,8 @@ export default function Home({ }) {
           <div className='fixed z-50 left-12 -translate-x-1/2 bottom-28'>
             <Logo />
           </div>
-
-          {/* Intro */}
-          <Intro />
-
-          {/* About */}
+          <Hero />
           <About />
-
-          {/* Products */}
           <Projects />
         </Layout>
       </main>
