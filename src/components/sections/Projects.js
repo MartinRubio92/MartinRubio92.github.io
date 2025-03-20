@@ -4,8 +4,8 @@ import { useData } from '../context/DataContext';
 
 const imageMap = {
   ecommerceImage: "/images/projects/ecommerce.png",
-  portfolioImage: "/images/projects/portfolio_vctech.png",
-  portfolioVCTImage: "/images/projects/project_portfolio.png",
+  portfolioImage: "/images/projects/project_portfolio.png",
+  portfolioVCTImage: "/images/projects/portfolio_vctech.png",
 };
 
 const Projects = () => {
