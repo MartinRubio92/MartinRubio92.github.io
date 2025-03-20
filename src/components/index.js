@@ -42,7 +42,3 @@ export { NodeLogo } from './shared/Icons/Skills/NodeJs_v3';
 export { Python } from './shared/Icons/Skills/Python';
 export { ReactLogo } from './shared/Icons/Skills/ReactLogo';
 export { Tailwind } from './shared/Icons/Skills/Tailwind';
-
-export { default as ecommerceImage } from './shared/Images/ecommerce.png';
-export { default as portfolioImage } from './shared/Images/project_portfolio.png';
-export { default as portfolioVCTImage } from './shared/Images/portfolio_vctech.png';

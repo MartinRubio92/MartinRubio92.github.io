@@ -3,9 +3,9 @@ import { AnimatedText, ecommerceImage, FeaturedProjects, portfolioImage, portfol
 import { useData } from '../context/DataContext';
 
 const imageMap = {
-  ecommerceImage: ecommerceImage,
-  portfolioImage: portfolioImage,
-  portfolioVCTImage: portfolioVCTImage,
+  ecommerceImage: "/images/projects/ecommerce.png",
+  portfolioImage: "/images/projects/portfolio_vctech.png",
+  portfolioVCTImage: "/images/projects/project_portfolio.png",
 };
 
 const Projects = () => {
