@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnimatedText, ecommerceImage, FeaturedProjects, portfolioImage, portfolioVCTImage, Project } from '@/components';
+import { AnimatedText, FeaturedProjects, Project } from '@/components';
 import { useData } from '../context/DataContext';
 
 const imageMap = {
