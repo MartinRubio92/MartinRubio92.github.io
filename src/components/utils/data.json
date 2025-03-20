@@ -1,15 +1,31 @@
 {
+  "alias": "Martin Rubio",
+  "links": {
+    "github": "https://github.com/MartinRubio92",
+    "linkedin": "https://www.linkedin.com/in/martin-rubio-242248162/",
+    "instagram": ""
+  },
+  "email": "martin.l.rubio92@gmail.com",
   "clients": 1,
   "years": 7,
   "experiences": [
     {
+      "position_es": "Desarrollador Frontend",
+      "position_en": "Frontend Developer",
+      "company": "Equila SRL",
+      "time": "2023-Actualidad",
+      "address": "remoto",
+      "work_es": "Estoy desarrollando una billetera virtual para Android, iOS y web, respaldada por Banco Formosa y Movilcash. Mi responsabilidad principal es el desarrollo frontend, asegurando que la experiencia del usuario sea óptima tanto en la web como en plataformas móviles. Utilizo tecnologías modernas y trabajo de manera colaborativa con el equipo para alcanzar los objetivos del proyecto.",
+      "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
+    },
+    {
       "position_es": "Desarrollador Full Stack",
       "position_en": "Full Stack Developer",
-      "company": "IT Resources",
-      "time": "2016-2021",
-      "address": "Buenos Aires",
-      "work_es": "Como Desarrollador Full Stack, fui responsable del desarrollo de servicios REST, procesos BPM y interfaces web utilizando tecnologías como JavaScript, Handlebars, MySQL, MyBatis, y JBPM. Participé en el diseño y desarrollo de soluciones para sistemas de gestión integral, trabajando estrechamente con el equipo técnico para garantizar la calidad del código y la eficiencia del software.",
-      "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
+      "company": "Bizit Global",
+      "time": "2021-2023",
+      "address": "Córdoba - remoto",
+      "work_es": "Trabajé en el desarrollo de nuevas características para una plataforma de call center financiero, utilizando tecnologías como Java, Spring Boot, y Spring Batch. También contribuí al mantenimiento y mejora continua de la plataforma, asegurando su estabilidad y escalabilidad.",
+      "work_en": "I worked on developing new features for a financial call center platform, using technologies such as Java, Spring Boot, and Spring Batch. I also contributed to the maintenance and continuous improvement of the platform, ensuring its stability and scalability."
     },
     {
       "position_es": "Líder Técnico",
@@ -23,19 +39,10 @@
     {
       "position_es": "Desarrollador Full Stack",
       "position_en": "Full Stack Developer",
-      "company": "Bizit Global",
-      "time": "2021-2023",
-      "address": "Córdoba - remoto",
-      "work_es": "Trabajé en el desarrollo de nuevas características para una plataforma de call center financiero, utilizando tecnologías como Java, Spring Boot, y Spring Batch. También contribuí al mantenimiento y mejora continua de la plataforma, asegurando su estabilidad y escalabilidad.",
-      "work_en": "I worked on developing new features for a financial call center platform, using technologies such as Java, Spring Boot, and Spring Batch. I also contributed to the maintenance and continuous improvement of the platform, ensuring its stability and scalability."
-    },
-    {
-      "position_es": "Desarrollador Frontend",
-      "position_en": "Frontend Developer",
-      "company": "Equila SRL",
-      "time": "2023-Actualidad",
-      "address": "Córdoba - remoto",
-      "work_es": "Estoy desarrollando una billetera virtual para Android, iOS y web, respaldada por Banco Formosa y Movilcash. Mi responsabilidad principal es el desarrollo frontend, asegurando que la experiencia del usuario sea óptima tanto en la web como en plataformas móviles. Utilizo tecnologías modernas y trabajo de manera colaborativa con el equipo para alcanzar los objetivos del proyecto.",
+      "company": "IT Resources",
+      "time": "2016-2021",
+      "address": "Buenos Aires",
+      "work_es": "Como Desarrollador Full Stack, fui responsable del desarrollo de servicios REST, procesos BPM y interfaces web utilizando tecnologías como JavaScript, Handlebars, MySQL, MyBatis, y JBPM. Participé en el diseño y desarrollo de soluciones para sistemas de gestión integral, trabajando estrechamente con el equipo técnico para garantizar la calidad del código y la eficiencia del software.",
       "work_en": "As a Full Stack Developer, I was responsible for the development of REST services, BPM processes, and web interfaces using technologies such as JavaScript, Handlebars, MySQL, MyBatis, and JBPM. I participated in the design and development of solutions for end-to-end management systems, working closely with the technical team to ensure code quality and software efficiency."
     }
   ],
@@ -74,7 +81,6 @@
       "experience": "2",
       "descripcion": ""
     },
-    
     {
       "name": "Java",
       "iconComponent": "Java",
@@ -106,22 +112,37 @@
       "descripcion": ""
     }
   ],
-  "links": {
-    "github": "https://github.com/MartinRubio92",
-    "linkedin": "https://www.linkedin.com/MartinRubio",
-    "instagram": ""
-  },
-  "email": "martin.l.rubio92@gmail.com",
-  "projects_cant": 1,
+  "projects_cant": 3,
   "projects": [
+    {
+      "name": "E-Commerce con Vendure",
+      "descripcion_es": "e-commerce diseñado para ofrecer una experiencia de compra rápida y fluida. Construido con Next.js y Tailwind CSS en el frontend, el sitio es completamente responsive y garantiza una navegación optimizada tanto en dispositivos móviles como en escritorio. En el backend, emplea Vendure para la gestión de productos, inventario y pedidos, y se integra con PostgreSQL como base de datos, asegurando la fiabilidad y escalabilidad de la plataforma.",
+      "descripcion_en": "e-commerce designed to offer a fast and fluid purchasing experience. Built with Next.js and Tailwind CSS on the frontend, the site is fully responsive and ensures optimized navigation on both mobile and desktop devices. On the backend, it uses Vendure for product, inventory and order management, and integrates with PostgreSQL as a database, ensuring the reliability and scalability of the platform.",
+      "image": "ecommerceImage",
+      "type": "Project",
+      "github": "https://github.com/villacentenariotech/front_ecommerce",
+      "link": "https://front-ecommerce-ashy.vercel.app/",
+      "code_type": "1"
+    },
     {
       "name": "Portfolio",
       "descripcion_es": "Un portfolio profecional creado con NextJS y Tailwind CSS. Desarrollado para su facil actualización",
       "descripcion_en": "A professional portfolio built with Next JS and Tailwind CSS. Built for easy updating",
-      "image": "project_portfolio",
+      "image": "portfolioImage",
       "type": "Project",
-      "github": "https://github.com/MartinRubio92/portfolio",
-      "link": ""
+      "github": "https://github.com/MartinRubio92/MartinRubio92.github.io",
+      "link": "https://martinrubio92.github.io/",
+      "code_type": "2"
+    },
+    {
+      "name": "Portfolio VCTech",
+      "descripcion_es": "Un portfolio profecional creado con NextJS y Tailwind CSS. Desarrollado para su facil actualización",
+      "descripcion_en": "A professional portfolio built with Next JS and Tailwind CSS. Built for easy updating",
+      "image": "portfolioVCTImage",
+      "type": "Project",
+      "github": "https://github.com/villacentenariotech/villacentenariotech.github.io",
+      "link": "https://villacentenariotech.github.io/",
+      "code_type": "2"
     }
   ]
 }

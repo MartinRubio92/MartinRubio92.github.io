@@ -1,7 +1,7 @@
 // sections
-export {default as Layout} from './Layout'
-export { NavBar } from './NavBar'
-export {default as Footer} from './Footer'
+export {default as Layout} from './layout/Layout'
+export { NavBar } from './layout/NavBar'
+export { Footer} from './layout/Footer'
 
 export {default as Skills} from './sections/Skills'
 
@@ -43,5 +43,6 @@ export { Python } from './shared/Icons/Skills/Python';
 export { ReactLogo } from './shared/Icons/Skills/ReactLogo';
 export { Tailwind } from './shared/Icons/Skills/Tailwind';
 
-// Imagenes
-export {default as projectPortfolio} from "@/../public/images/projects/project_portfolio.png"
+export { default as ecommerceImage } from './shared/Images/ecommerce.png';
+export { default as portfolioImage } from './shared/Images/project_portfolio.png';
+export { default as portfolioVCTImage } from './shared/Images/portfolio_vctech.png';

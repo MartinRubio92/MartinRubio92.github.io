@@ -12,10 +12,10 @@ export const NavbarMobile = () => {
         '>
 
       <nav className='flex items-center flex-col justify-center'>
-        <CustomMobileLink href="#home" title="Home" className='' toggle={handleIsOpen} />
-        <CustomMobileLink href="#about" title="About" className='' toggle={handleIsOpen} />
-        <CustomMobileLink href="#skills" title="Skills" className='' toggle={handleIsOpen} />
-        <CustomMobileLink href="#projects" title="Projects" className='' toggle={handleIsOpen} />
+        <CustomMobileLink href="#home" title={translations.NAVBAR_HOME} className='text-dark dark:text-light hover:text-primary-500' toggle={handleIsOpen} />
+        <CustomMobileLink href="#about" title={translations.NAVBAR_ABOUT} className='text-dark dark:text-light hover:text-primary-500' toggle={handleIsOpen} />
+        <CustomMobileLink href="#skills" title={translations.NAVBAR_SKILLS} className='text-dark dark:text-light hover:text-primary-500' toggle={handleIsOpen} />
+        <CustomMobileLink href="#projects" title={translations.NAVBAR_PROJECTS} className='text-dark dark:text-light hover:text-primary-500' toggle={handleIsOpen} />
       </nav>
 
       <nav className='flex items-center justify-center flex-wrap mt-2'>
@@ -26,7 +26,7 @@ export const NavbarMobile = () => {
         >
           <GithubIcon />
         </motion.a>
-        <motion.a href={githubLink} target={"_blank"}
+        <motion.a href={linkedin} target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 ml-3 sx:mx-1'
@@ -46,6 +46,12 @@ export const NavbarMobile = () => {
               :
               <MoonIcon className={"fill-dark"} />
           }
+        </button>
+        <button onClick={switchLanguage}
+          className={`ml-3 text-dark dark:text-light
+          `}
+        >
+          {locale === 'en' ? 'En' : 'Es'}
         </button>
 
       </nav>
